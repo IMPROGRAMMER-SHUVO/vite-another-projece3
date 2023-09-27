@@ -1,0 +1,22 @@
+.shop-container{
+   display: grid;
+   grid-template-columns: 4fr 1fr;
+   
+}
+.product-conatiner{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    gap: 45px;
+}
+.cart-conatainer{
+    border: 2px solid gray;
+    background-color: hotpink;
+    border-radius: 45px 5px 0 0;
+    color: beige;
+
+}
+.cart-conatainer:hover{
+    background-color: rgb(109, 207, 207);
+    transition: 1.5s;
+}

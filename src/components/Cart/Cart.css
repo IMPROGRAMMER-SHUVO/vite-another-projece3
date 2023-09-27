@@ -1,0 +1,9 @@
+.h5tag{
+    text-align: center;
+    font-size: 26px;
+}
+.cart{
+    padding: 25px;
+    position: sticky;
+    top: 0;
+}

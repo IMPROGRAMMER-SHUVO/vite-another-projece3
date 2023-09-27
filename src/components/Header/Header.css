@@ -1,0 +1,32 @@
+.header{
+    height: 80px;
+    background-color: #ca4885;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 0 0 55px 55px;
+
+   
+}
+.header:hover{
+    background-color: aqua;
+    transition: 1.5s;
+}
+    
+.imgnav:hover{
+font-size: 30px;
+}
+ nav.header a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 30px;
+}nav.header a:hover{
+    color: rgb(189, 108, 61);
+    text-transform:uppercase;
+    position:sticky;
+    transition: 2s;
+    rotate:  180deg;
+
+}

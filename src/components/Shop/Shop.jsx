@@ -3,7 +3,10 @@ import './Shop.css'
 import { useEffect } from 'react';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStreetView } from '@fortawesome/free-solid-svg-icons';
 
 
 const Shop = () => {
@@ -79,6 +82,10 @@ setCart(newcart);
         addToDb(product.id)
 
        }
+       const handleclearCart=()=>{
+        setCart([])
+        deleteShoppingCart()
+    }
     return (
         <div className="shop-container">
             <div className="product-conatiner">
@@ -92,7 +99,14 @@ handleaddtocard={handleaddtocard}
                 }
             </div>
             <div className="cart-conatainer">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}
+                handleclaarcart={handleclearCart}
+                >
+  <Link to='/orders'>
+      <button   className='btn-processed' > Review Order  <FontAwesomeIcon icon={faStreetView}/></button>
+           
+           </Link>
+                </Cart>
             </div>
         </div>
     );

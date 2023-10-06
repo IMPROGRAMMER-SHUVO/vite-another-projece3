@@ -7,3 +7,14 @@
     position: sticky;
     top: 0;
 }
+.btnclear{
+    width: 90%;
+    height: 56px;
+    font-size: 21px;
+    margin: 10px auto;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

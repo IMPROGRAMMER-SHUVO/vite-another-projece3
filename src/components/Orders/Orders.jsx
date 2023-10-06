@@ -1,12 +1,14 @@
 
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 import './orders.css'
 import Cart from '../Cart/Cart';
 
 import ReviewItem from '../ReviewItem/ReviewItem';
 import { useState } from 'react';
-import { removeFromDb } from '../../utilities/fakedb';
+import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStreetView } from '@fortawesome/free-solid-svg-icons';
 const Orders = () => {
   const savedcart=useLoaderData();
 const [cart,setCart]=useState(savedcart)
@@ -19,7 +21,10 @@ setCart(remaining);
  removeFromDb (id)
 
 }
-
+const handleclaarcart=()=>{
+  setCart([]);
+  deleteShoppingCart();
+}
  return(
   
         <div className="shop-container">
@@ -34,7 +39,12 @@ handleRemoveFormcart={handleRemoveFormcart}
            
           </div>
           <div className="cart-conatainer">
-          <Cart cart={cart}></Cart>
+          <Cart
+           cart={cart}
+handleclaarcart={handleclaarcart}
+          >
+         <Link to='/chackout'> <button className='btn-processed'>prociced  <FontAwesomeIcon icon={faStreetView}/></button></Link>
+          </Cart>
           </div>
         </div>
     );

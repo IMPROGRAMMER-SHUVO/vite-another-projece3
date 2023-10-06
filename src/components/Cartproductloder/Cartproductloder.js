@@ -17,6 +17,7 @@ for(const id in sortcart){
 saveCart.push(addedproduct)
     }
 }
+// return{products,cart:saveCart}
 return saveCart;
    
    

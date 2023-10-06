@@ -20,3 +20,14 @@
     background-color: rgb(109, 207, 207);
     transition: 1.5s;
 }
+.btn-processed{
+    width: 90%;
+    height: 56px;
+    font-size: 21px;
+    margin: 10px auto;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
